@@ -1,6 +1,7 @@
 const Weighing = require('../models/weighing')
 
 exports.createWeighing = (req, res, next) => {
+    console.log(req)
     const weighing = new Weighing({
       ...req.body,
     });

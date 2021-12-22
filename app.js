@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use('/api/weighings', weighingRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api/weighing', weighingRoutes);
+app.use('/api/user', userRoutes);
 
 module.exports = app;
