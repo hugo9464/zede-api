@@ -1,10 +1,13 @@
 const Weighing = require('../models/weighing')
 
 exports.createWeighing = (req, res, next) => {
-    console.log(req)
-    const weighing = new Weighing({
-      ...req.body,
+    weighing = new Weighing({
+      weight: req.body.weight,
+      type: req.body.type,
+      userId: req.body.userId,
+      date: new Date()
     });
+
     weighing
       .save()
       .then(() => res.status(201).json({ message: "Pesée enregistré !" }))
